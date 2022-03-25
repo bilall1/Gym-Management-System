@@ -1,0 +1,939 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+nav {
+    background-color: indigo;
+    padding: 10px;
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#logo {
+    font-size: 30px;
+    color: white;
+}
+
+#bars a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    padding-left: 10px;
+}
+
+#navtext {
+    width: 90%;
+    margin: 0px auto;
+    position: relative;
+}
+
+#navtext h1 {
+    padding-top: 100px;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+}
+
+#navtext p {
+    padding-top: 30px;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+}
+
+#navtext #butt button {
+    position: relative;
+    top: 15px;
+    left: 45%;
+    border-color: white;
+    background-color: white;
+    font-size: 15px;
+    color: black;
+    border-radius: 0px;
+    padding: 6px 6px;
+    margin-bottom: 150px;
+}
+
+.indexmidsection {
+    widows: 100%;
+    background-color: ivory;
+    padding-top: 70px;
+	padding-bottom: 90px;
+}
+
+.indexmidsection .indextext-pic {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px auto;
+}
+
+.indexmidsection .indextext-pic .indextextside {
+    text-align: left;
+    padding: 30px;
+}
+
+.indexmidsection .indextext-pic .indexpicture {
+    margin: 10px 0px;
+    padding: 100px;
+    background-image: url(../image/gym.jpg);
+    width: 120%;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.indexmidsection .indextext-pic .indexpicture h3 {
+    padding-top: 100px;
+}
+
+
+#skill h1 {
+    text-align: center;
+    color: black;
+    font-size: 50px;
+    padding: 10px 0px;
+}
+
+.icon-row1 {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px auto;
+}
+
+.icon-row1 .html {
+    font-size: 100px;
+    width: 300px;
+    color: orange;
+}
+
+.icon-row1 .html h2 {
+    font-size: 30px;
+    color: black;
+}
+
+.icon-row1 .css {
+    font-size: 100px;
+    width: 300px;
+    color: blue;
+}
+
+.icon-row1 .css h2 {
+    font-size: 30px;
+    color: black;
+}
+
+.icon-row1 .java {
+    font-size: 100px;
+    width: 300px;
+    color: yellow;
+}
+
+.icon-row1 .java h2 {
+    font-size: 30px;
+    color: black;
+}
+
+.icon-row1 p {
+    padding-top: 10px;
+    color: black;
+    font-size: 20px;
+}
+
+.icon-row1 .html,
+.java,
+.css {
+    text-align: center;
+}
+
+
+
+
+.icon-row2 {
+    padding-top: 100px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+}
+
+.icon-row2 .react {
+    font-size: 100px;
+    width: 300px;
+    color: teal;
+}
+
+.icon-row2 .react h2 {
+    font-size: 30px;
+    color: black;
+}
+
+.icon-row2 .sas {
+    font-size: 100px;
+    width: 300px;
+    color: purple;
+}
+
+.icon-row2 .sas h2 {
+    font-size: 30px;
+    color: black;
+}
+
+.icon-row2 .word {
+    font-size: 100px;
+    width: 300px;
+    color: lightblue;
+}
+
+.icon-row2 .word h2 {
+    font-size: 30px;
+    color: black;
+}
+
+.icon-row2 p {
+    padding-top: 10px;
+    color: black;
+    font-size: 20px;
+}
+
+.icon-row2 .react,
+.sas,
+.word {
+    text-align: center;
+}
+
+.welcome .txt {
+    width: 100%;
+    color: white;
+    font-size: 30px;
+    background-color: purple;
+    padding: 150px 20px;
+    text-align: center;
+}
+
+.welcome .txt .read button {
+    margin-top: 20px;
+	font-size: 20px;
+	padding: 6px 6px;
+    border: none;
+    background-color: White;
+    color: White;
+}
+
+
+.testo {
+    background-color: skin;
+    padding: 60px 0px;
+}
+
+.testo .testodata {
+    width: 80%;
+    margin: 0px auto;
+    padding: 50px 10px;
+    text-align: center;
+    color: Black;
+}
+
+.testo .testodata p {
+    color: Black;
+    padding: 20px 0px;
+}
+
+.testo .testodata .img {
+    background-image: url(../image/logo.png);
+    padding: 5%;
+    width: 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    left: 45%;
+}
+
+
+/*-------------------Contact Page ---------------------------------*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+nav {
+    background-color: indigo;
+    padding: 10px;
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#logo {
+    font-size: 30px;
+    color: white;
+}
+
+#bars a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    padding-left: 10px;
+}
+
+#abttext {
+    width: 90%;
+    margin: 0px auto;
+    position: relative;
+}
+
+#abttext h1 {
+    padding: 80px 0px;
+    font-size: 50px;
+    text-align: left;
+    color: white;
+}
+
+.form {
+    width: 100%;
+    background-color: aliceblue;
+}
+
+.form .heading {
+    width: 90%;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.form .heading h1 {
+    padding: 10px 0px;
+}
+
+.form .formdata form {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.form .formdata .textbox {
+    text-align: center;
+}
+
+.form .formdata .textbox button {
+    margin: 20px auto;
+    padding: 10px 55px;
+    border: none;
+    border-color: indigo;
+    background-color: indigo;
+    color: white;
+}
+
+.design1 {
+    background-color: aliceblue;
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+
+.design1 .design-data1 {
+	background-color: aliceblue;
+    width: 100%;
+    margin: 0px auto;
+    padding: 5px 10px;
+    text-align: center;
+    color: black;
+}
+
+.design1 .design-data1 p {
+    color: black;
+	padding: 15px 0px;
+}
+
+.design1 .design-data1 .click1 button {
+    padding: 6px 6px;
+    border: none;
+    background-color: White;
+    color: Blue;
+	font-size:15px;
+}
+
+
+/* ------------------------------about page  ----------------------------  */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+nav {
+    background-color: indigo;
+    padding: 10px;
+    width: 100%;
+}
+
+.navbar1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#logo1 {
+    font-size: 30px;
+    color: white;
+}
+
+#bars1 a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    padding-left: 10px;
+}
+
+#abttext1 {
+    width: 90%;
+    margin: 0px auto;
+    position: relative;
+}
+
+#abttext1 h1 {
+    padding: 80px 0px;
+    font-size: 50px;
+    text-align: left;
+    color: white;
+}
+
+.midsection {
+    widows: 100%;
+    background-color: ivory;
+    padding-top: 70px;
+}
+
+.midsection .text-pic {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px auto;
+}
+
+.midsection .text-pic .textside {
+    text-align: left;
+    padding: 30px;
+}
+
+.midsection .text-pic .picture {
+    margin: 10px 0px;
+    padding: 100px;
+    background-image: url(../image/CURL.jpg);
+    width: 60%;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.midsection .text-pic .picture h3 {
+    padding-top: 100px;
+}
+
+
+
+
+.finalservice .headingf {
+    padding: 80px 0px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.finalservice .images {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0px auto;
+}
+
+.finalservice .images .img1 {
+    margin: 10px 0px;
+    padding: 100px;
+    background-image: url(../image/testimonials-1.jpg);
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 100%;
+}
+
+.finalservice .images .img2 {
+    margin: 10px 0px;
+    padding: 100px;
+    background-image: url(../image/testimonials-2.jpg);
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 100%;
+}
+
+.finalservice .images .img3 {
+    margin: 10px 0px;
+    padding: 100px;
+    background-image: url(../image/testimonials-3.jpg);
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 100%;
+}
+
+.finalservice .textbeneath {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0px auto;
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.design2 {
+    background-color: silver;
+    padding: 20px 0px;
+}
+
+.design2 .design-data2 {
+    width: 80%;
+    margin: 0px auto;
+    padding: 5px 10px;
+    text-align: center;
+    color: black;
+}
+
+.design2 .design-data2 p {
+    color: black;
+    padding: 15px 0px;
+}
+
+.design2 .design-data2 .click2 button {
+    padding: 6px 6px;
+	font-size:15px;
+    border: none;
+    background-color: White;
+    color: Blue;
+	
+}
+
+.follow {
+    background-color: black;
+    padding: 20px 0px;
+}
+
+.follow .follow-data {
+    width: 80%;
+    margin: 0px auto;
+    padding: 5px 10px;
+    text-align: center;
+    color: white;
+}
+
+.follow .follow-data .ic i {
+    font-size: 30px;
+    padding: 5px 10px;
+}
+
+
+/*   Portfilo                */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+nav {
+    background-color: indigo;
+    padding: 10px;
+    width: 100%;
+}
+
+.navbar2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#logo2 {
+    font-size: 30px;
+    color: white;
+}
+
+#bars2 a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    padding-left: 10px;
+}
+
+#abttext2 {
+    width: 90%;
+    margin: 0px auto;
+    position: relative;
+}
+
+#abttext2 h1 {
+    padding: 80px 0px;
+    font-size: 50px;
+    text-align: left;
+    color: white;
+}
+
+
+/*   Blog                     */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+nav {
+    background-color: indigo;
+    padding: 10px;
+    width: 100%;
+}
+
+.navbar3 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#logo3 {
+    font-size: 30px;
+    color: white;
+}
+
+#bars3 a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    padding-left: 10px;
+}
+
+#abttext3 {
+    width: 90%;
+    margin: 0px auto;
+    position: relative;
+}
+
+#abttext3 h1 {
+    padding: 80px 0px;
+    font-size: 50px;
+    text-align: left;
+    color: white;
+}
+/*  Sign IN */
+
+
+.signupform {
+    width: 100%;
+    background-color: aliceblue;
+}
+
+.signupform .signupheading {
+    width: 90%;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.signupform .signupheading h1 {
+    padding: 10px 0px;
+}
+
+.signupform .signupformdata form {
+    width: 60%;
+    margin: 20px auto;
+    text-align: Left;
+}
+
+.signupform .signupformdata .signuptextbox {
+    text-align: center;
+}
+
+.signupform .signupformdata .signuptextbox button {
+    margin: 20px auto;
+    padding: 10px 55px;
+    border: none;
+    border-color: indigo;
+    background-color: indigo;
+    color: white;
+}
+
+.signupdesign1 {
+    background-color: aliceblue;
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+
+.signupdesign1 .signupdesign-data1 {
+	background-color: aliceblue;
+    width: 100%;
+    margin: 0px auto;
+    padding: 5px 10px;
+    text-align: center;
+    color: black;
+}
+
+.signupdesign1 .signupdesign-data1 p {
+    color: black;
+	padding: 15px 0px;
+}
+
+.signupdesign1 .signupdesign-data1 .signupclick1 button {
+    padding: 6px 6px;
+    border: none;
+    background-color: GrayText;
+    color: White;
+}
+
+/* SIGN IN */
+
+.signinform {
+    width: 100%;
+    background-color: aliceblue;
+}
+
+.signinform .signinheading {
+    width: 90%;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.signinform .signinheading h1 {
+    padding: 10px 0px;
+}
+
+.signinform .signinformdata form {
+    width: 60%;
+    margin: 20px auto;
+    text-align: Left;
+}
+
+.signinform .signinformdata .signintextbox {
+    text-align: center;
+}
+
+.signinform .signinformdata .signintextbox button {
+    margin: 20px auto;
+    padding: 10px 55px;
+    border: none;
+    border-color: indigo;
+    background-color: indigo;
+    color: white;
+}
+
+.signindesign1 {
+    background-color: aliceblue;
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+
+.signindesign1 .signindesign-data1 {
+	background-color: aliceblue;
+    width: 100%;
+    margin: 0px auto;
+    padding: 5px 10px;
+    text-align: center;
+    color: black;
+}
+
+.signindesign1 .signindesign-data1 p {
+    color: black;
+	padding: 15px 0px;
+}
+
+.signindesign1 .signindesign-data1 .signinclick1 button {
+    padding: 6px 6px;
+    border: none;
+    background-color: GrayText;
+    color: White;
+}
+/* SIGNUP COMPLETE*/
+
+
+.signupcompleteform {
+    width: 100%;
+    background-color: aliceblue;
+}
+
+.signupcompleteform .signupcompleteheading {
+    width: 90%;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.signupcompleteform .display_of_workout {
+    width: 50%;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.signupcompleteform .enter_plan {
+    width: 50%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.signupcompleteform .signupcompleteheading h1 {
+    padding: 10px 0px;
+}
+
+
+.signupcompleteform .signupcompleteformdata  {
+    
+    padding: 40px 0px;
+    font-size: 40 px;
+    text-align: center;
+    color: Black;
+
+}
+
+
+.signupcompleteform .signupcompleteformdata form {
+    width: 60%;
+    margin: 20px auto;
+    text-align: Left;
+}
+
+.signupcompleteform .signupcompleteformdata .signupcompletetextbox {
+    text-align: center;
+}
+
+.signupcompleteform .signupcompleteformdata .signupcompletetextbox button {
+    margin: 20px auto;
+    padding: 10px 55px;
+    border: none;
+    border-color: indigo;
+    background-color: indigo;
+    color: white;
+}
+.display_table{
+	background-color: aliceblue;
+	
+}
+.display_table .payement {
+    margin:30px auto;
+	background-color: aliceblue;
+   
+}
+
+
+
+
+/* display php */
+
+
+/*          The End of CSS                */
+
+
+
+
+/*CSS*/
+
+/*Membership selection*/
+
+
+.membership_rows {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px auto;
+	margin-bottom: 50px;
+	
+}
+
+.membership_rows .weekly {
+    font-size: 100px;
+    width: 300px;
+    color: orange;
+}
+
+.membership_rows .weekly h2 {
+    font-size: 30px;
+    color: black;
+}
+
+.membership_rows .monthly {
+    font-size: 100px;
+    width: 300px;
+    color: blue;
+}
+
+.membership_rows .monthly h2 {
+    font-size: 30px;
+    color: black;
+}
+
+.membership_rows .yearly {
+    font-size: 100px;
+    width: 300px;
+    color: yellow;
+}
+
+.membership_rows .yearly h2 {
+    font-size: 30px;
+    color: black;
+}
+
+.membership_rows p {
+    padding-top: 10px;
+    color: black;
+    font-size: 20px;
+}
+
+.membership_rows .weekly,
+.monthly,
+.yearly {
+    text-align: center;
+}
+
+.mycss{
+	color: green;
+	border:1px solid #000;
+	background: #ccc;
+	padding: 10px;
+	font-size:1.20em;
+	}
