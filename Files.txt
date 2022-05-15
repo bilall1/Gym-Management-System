@@ -1,0 +1,237 @@
+
+CREATE TABLE Member
+(
+  email VARCHAR(30) NOT NULL,
+  password VARCHAR(20) NOT NULL,
+  name VARCHAR(20) NOT NULL,
+  age INT NOT NULL,
+  cnic INT NOT NULL,
+  gender VARCHAR(6) NOT NULL,
+  address VARCHAR(30) NOT NULL,
+  PRIMARY KEY (email),
+  UNIQUE (cnic)
+);
+
+
+
+CREATE TABLE Trainer
+(
+  email VARCHAR(30) NOT NULL,
+  password VARCHAR(20) NOT NULL,
+  name VARCHAR(20) NOT NULL,
+  age INT NOT NULL,
+  cnic INT NOT NULL,
+  charges INT NOT NULL,
+  gender VARCHAR(6) NOT NULL,
+  address VARCHAR(30) NOT NULL,
+  expertise VARCHAR(100) NOT NULL,
+  status INT NOT NULL,
+  PRIMARY KEY (email),
+  UNIQUE (cnic)
+);
+
+
+CREATE TABLE Membership
+(
+  member_id int NOT NULL AUTO_INCREMENT,
+  membership_name VARCHAR(20) NOT NULL,
+  price int NOT NULL,
+  description VARCHAR(50),
+  PRIMARY KEY (member_id)
+);
+
+CREATE TABLE Member_Membership
+(
+  email VARCHAR(30) NOT NULL,
+  member_id INT NOT NULL,
+  FOREIGN KEY (email) REFERENCES Member(email),
+  FOREIGN KEY (member_id) REFERENCES Membership(member_id),
+  CONSTRAINT MM PRIMARY KEY(email,member_id)
+);
+
+CREATE TABLE Workout_Plan ( plan_id INT NOT NULL AUTO_INCREMENT, type VARCHAR(15) NOT NULL, description VARCHAR(50) NOT NULL, duration VARCHAR(20) NOT NULL, PRIMARY KEY (plan_id) );
+
+CREATE TABLE Member_Workout_plan
+(
+  email VARCHAR(30) NOT NULL,
+  plan_id INT NOT NULL,
+  FOREIGN KEY (email) REFERENCES Member(email),
+  FOREIGN KEY (plan_id) REFERENCES Workout_Plan (plan_id),
+  CONSTRAINT MP PRIMARY KEY(email,plan_id)
+);
+
+CREATE TABLE Nutrition
+(
+  nut_id INT NOT NULL AUTO_INCREMENT,
+  breakfast vARCHAR(50) NOT NULL,
+  lunch vARCHAR(50) NOT NULL,
+  dinner vARCHAR(50) NOT NULL,
+  plan_id INT NOT NULL,
+  FOREIGN KEY (plan_id) REFERENCES Workout_Plan(plan_id),
+  PRIMARY KEY (nut_id)
+);
+
+CREATE TABLE workout_plan_nutrition
+(
+  plan_id INT NOT NULL,
+  nut_id INT NOT NULL,
+  FOREIGN KEY (plan_id) REFERENCES Workout_Plan (plan_id),
+  FOREIGN KEY (nut_id) REFERENCES Nutrition(nut_id),
+  CONSTRAINT PN PRIMARY KEY(plan_id,nut_id)
+);
+
+CREATE TABLE memeber_plan_nutrition
+(
+  plan_id INT NOT NULL,
+  email VARCHAR(30) NOT NULL,
+  nut_id INT NOT NULL,
+  FOREIGN KEY (email) REFERENCES Member(email),
+  FOREIGN KEY (plan_id) REFERENCES Workout_Plan (plan_id),
+  FOREIGN KEY (nut_id) REFERENCES Nutrition(nut_id),
+  CONSTRAINT PN PRIMARY KEY(plan_id,nut_id,email)
+);
+
+CREATE TABLE Billing_membership ( email VARCHAR(30) NOT NULL, bill_date DATE NOT NULL, id INT NOT NULL AUTO_INCREMENT, membership_fee INT NOT NULL, FOREIGN KEY (email) REFERENCES Member(email), PRIMARY KEY (id) );
+
+CREATE TABLE Billing_monthly( email VARCHAR(30) NOT NULL, bill_date DATE NOT NULL, id INT NOT NULL AUTO_INCREMENT, monthly_fee INT NOT NULL, trainer_fee INT NOT NULL, total INT NOT NULL,FOREIGN KEY (email) REFERENCES Member(email), PRIMARY KEY (id) );
+			
+
+insert into workout_plan Values(NULL,'gain',' Bicep,tricep,forearms Gain','2 weeks');
+insert into workout_plan Values(NULL,'gain','Build back and shoulder and abs','2 weeks');
+insert into workout_plan Values(NULL,'gain','Improve chest,legs and core','2 weeks');
+insert into workout_plan Values(NULL,'loss','Natural ways to lose weight','2 weeks');
+insert into workout_plan Values(NULL,'loss',' Extreme weight loss','3 weeks');
+insert into workout_plan Values(NULL,'loss','Burn Max Calories(Intense Loss)','1 weeks');
+
+
+
+
+
+
+CREATE TABLE card
+(
+  card_no INT NOT NULL,
+  cvv INT NOT NULL,
+  expiry_date DATE,
+  name VARCHAR(20) NOT NULL,
+  balance int NOT NULL,
+  PRIMARY KEY (card_no)
+);
+
+CREATE TABLE Attendence_log ( attend_id INT NOT NULL AUTO_INCREMENT, user_type vARCHAR(30) NOT NULL, email vARCHAR(30) NOT NULL, attend_date DATE NOT NULL, PRIMARY KEY (attend_id) );
+
+INSERT INTO `attendence_log` (`attend_id`, `user_type`, `email`, `attend_date`) VALUES (NULL, 'member', 'asad123@gmail.com', '2022-05-01'), (NULL, 'member', 'asad123@gmail.com', '2022-04-29');
+
+
+
+
+
+
+
+insert into card Values(12345,123,'2023-09-21',"Muhammad Bilal",90000000);  
+insert into card Values(54321,321,'2023-09-22',"Muhammad Fozan",99999999);
+
+
+
+insert into Nutrition Values(NULL,'Oats', 'Broccoli beef', 'Eggs and patato',1);
+insert into Nutrition Values(NULL, 'Omlet', 'Fish','Chicken',1);
+insert into Nutrition Values(NULL, 'Fried Eggs', 'Chicken Skillet','Vegetable Roll',2);
+insert into Nutrition Values(NULL, 'Bean Salat', 'BBQ Chicken','Patatoes',2);
+insert into Nutrition Values(NULL, 'Toast', 'Pasta ','Fish',3);
+insert into Nutrition Values(NULL, 'herbal Tea', 'Smoothie ','Salad',4);
+insert into Nutrition Values(NULL, 'Fresh Oat', 'Kabab ','Chicken Chest',4);
+insert into Nutrition Values(NULL, 'Egg Toast', 'Chili Fijita ','Cornt',5);
+insert into Nutrition Values(NULL, 'Chiken', 'Baroccali ','Selmon',5);
+insert into Nutrition Values(NULL, 'Veggy Rolls', 'Smothie ','Boiled Rice',6);
+insert into Nutrition Values(NULL, 'Toast', 'Macroni ','Steamed Roast',6);
+
+insert into membership Values(NULL,'Weekly',3000,'Limited Time but Worth it a try');
+
+insert into membership Values(NULL,'Monthly',9000,'Want to Join for limited time?');
+
+insert into membership Values(NULL,'Yearly',70000,'Pay Once. Enjoy one year of services');
+
+
+
+CREATE TABLE Member_Trainer
+(
+  member_email VARCHAR(30) NOT NULL,
+  trainer_email VARCHAR(30) NOT NULL,
+  FOREIGN KEY (member_email) REFERENCES Member(email),
+  FOREIGN KEY (trainer_email) REFERENCES Trainer(email),
+  CONSTRAINT MT PRIMARY KEY(member_email,trainer_email)
+);
+
+INSERT INTO `trainer` (`email`, `password`, `name`, `age`, `cnic`, `charges`, `gender`, `address`, `expertise`,`status`) VALUES ('asad123@gmail.com', '12345678', 'Asad', '25', '789098832', '15000', 'Male', 'F11', 'Expert in All Workouts and games ',0);
+
+
+CREATE TABLE Equipment
+(
+  equip_id INT NOT NULL AUTO_INCREMENT,
+  equip_name varchar(20) NOT NULL,
+  description VARCHAR(50),
+  PRIMARY KEY (equip_id)
+);
+
+
+insert into Equipment Values(NULL,'Dumbels','Best Rubber Hex Dumbbells');
+insert into Equipment Values(NULL,'Rod','Non Rustable Adjustable Rod');
+insert into Equipment Values(NULL,'Rope','Soft rope with multiple extensions');
+insert into Equipment Values(NULL,'Weights','Comes in 2/4/8/16 Kgs');
+insert into Equipment Values(NULL,'Treadmaile','REP Heavy Runner Product');
+
+
+CREATE TABLE Admin
+(
+  email VARCHAR(30) NOT NULL,
+  password VARCHAR(20) NOT NULL,
+  name VARCHAR(20) NOT NULL,
+  PRIMARY KEY (email),
+);
+
+insert into Admin Values(admin12@gmail.com,12345,"Maryam");
+
+
+CREATE TABLE Logs
+(
+  log_id INT NOT NULL AUTO_INCREMENT,
+  gain Float NOT NULL,
+  loss Float NOT NULL,
+  BMI Float NOT NULL,
+  log_date DATE NOT NULL,
+  duration VARCHAR(20) NOT NULL,
+  email VARCHAR(30) NOT NULL,
+  PRIMARY KEY (log_id),
+  FOREIGN KEY (email) REFERENCES Member(email)
+);
+
+CREATE TABLE Chat
+(
+  chat_id int NOT NULL AUTO_INCREMENT,
+  member_email VARCHAR(30) NOT NULL,
+  trainer_email VARCHAR(30) NOT NULL,
+  sender VARCHAR(20) NOT NULL,
+  message VARCHAR(200) NOT NULL,
+  PRIMARY KEY (chat_id)
+);
+
+CREATE TABLE demo
+(
+  demo_id int NOT NULL AUTO_INCREMENT,
+  demo_name VARCHAR(30) NOT NULL,
+  link VARCHAR(200) NOT NULL,
+  PRIMARY KEY (demo_id)
+);
+
+
+INSERT INTO `demo` (`demo_id`, `demo_name`, `link`) VALUES (NULL, 'Bicep', 'https://www.youtube.com/embed/mqfzsbV0lUs');
+INSERT INTO `demo` (`demo_id`, `demo_name`, `link`) VALUES (NULL, 'Chest', 'https://www.youtube.com/embed/lWXhih3xbVc');
+
+CREATE TABLE feedback
+(
+  feed_id int NOT NULL AUTO_INCREMENT,
+  name VARCHAR(20) NOT NULL,
+  email VARCHAR(30) NOT NULL,
+  message VARCHAR(200) NOT NULL,
+  PRIMARY KEY (feed_id)
+);

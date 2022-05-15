@@ -70,7 +70,7 @@ nav {
     widows: 100%;
     background-color: ivory;
     padding-top: 70px;
-	padding-bottom: 90px;
+    padding-bottom: 90px;
 }
 
 .indexmidsection .indextext-pic {
@@ -99,7 +99,6 @@ nav {
 .indexmidsection .indextext-pic .indexpicture h3 {
     padding-top: 100px;
 }
-
 
 #skill h1 {
     text-align: center;
@@ -159,9 +158,6 @@ nav {
 .css {
     text-align: center;
 }
-
-
-
 
 .icon-row2 {
     padding-top: 100px;
@@ -227,13 +223,12 @@ nav {
 
 .welcome .txt .read button {
     margin-top: 20px;
-	font-size: 20px;
-	padding: 6px 6px;
+    font-size: 20px;
+    padding: 6px 6px;
     border: none;
     background-color: White;
     color: White;
 }
-
 
 .testo {
     background-color: skin;
@@ -305,7 +300,7 @@ nav {
 #abttext {
     width: 90%;
     margin: 0px auto;
-    position: relative;
+    position: fixed;
 }
 
 #abttext h1 {
@@ -358,7 +353,7 @@ nav {
 }
 
 .design1 .design-data1 {
-	background-color: aliceblue;
+    background-color: aliceblue;
     width: 100%;
     margin: 0px auto;
     padding: 5px 10px;
@@ -368,7 +363,7 @@ nav {
 
 .design1 .design-data1 p {
     color: black;
-	padding: 15px 0px;
+    padding: 15px 0px;
 }
 
 .design1 .design-data1 .click1 button {
@@ -376,7 +371,7 @@ nav {
     border: none;
     background-color: White;
     color: Blue;
-	font-size:15px;
+    font-size: 15px;
 }
 
 
@@ -463,9 +458,6 @@ nav {
     padding-top: 100px;
 }
 
-
-
-
 .finalservice .headingf {
     padding: 80px 0px;
     text-align: center;
@@ -541,11 +533,10 @@ nav {
 
 .design2 .design-data2 .click2 button {
     padding: 6px 6px;
-	font-size:15px;
+    font-size: 15px;
     border: none;
     background-color: White;
     color: Blue;
-	
 }
 
 .follow {
@@ -665,8 +656,9 @@ nav {
     text-align: left;
     color: white;
 }
-/*  Sign IN */
 
+
+/*  Sign IN */
 
 .signupform {
     width: 100%;
@@ -709,7 +701,7 @@ nav {
 }
 
 .signupdesign1 .signupdesign-data1 {
-	background-color: aliceblue;
+    background-color: aliceblue;
     width: 100%;
     margin: 0px auto;
     padding: 5px 10px;
@@ -719,7 +711,7 @@ nav {
 
 .signupdesign1 .signupdesign-data1 p {
     color: black;
-	padding: 15px 0px;
+    padding: 15px 0px;
 }
 
 .signupdesign1 .signupdesign-data1 .signupclick1 button {
@@ -728,6 +720,7 @@ nav {
     background-color: GrayText;
     color: White;
 }
+
 
 /* SIGN IN */
 
@@ -772,7 +765,7 @@ nav {
 }
 
 .signindesign1 .signindesign-data1 {
-	background-color: aliceblue;
+    background-color: aliceblue;
     width: 100%;
     margin: 0px auto;
     padding: 5px 10px;
@@ -782,7 +775,7 @@ nav {
 
 .signindesign1 .signindesign-data1 p {
     color: black;
-	padding: 15px 0px;
+    padding: 15px 0px;
 }
 
 .signindesign1 .signindesign-data1 .signinclick1 button {
@@ -791,8 +784,9 @@ nav {
     background-color: GrayText;
     color: White;
 }
-/* SIGNUP COMPLETE*/
 
+
+/* SIGNUP COMPLETE*/
 
 .signupcompleteform {
     width: 100%;
@@ -821,16 +815,12 @@ nav {
     padding: 10px 0px;
 }
 
-
-.signupcompleteform .signupcompleteformdata  {
-    
+.signupcompleteform .signupcompleteformdata {
     padding: 40px 0px;
     font-size: 40 px;
     text-align: center;
     color: Black;
-
 }
-
 
 .signupcompleteform .signupcompleteformdata form {
     width: 60%;
@@ -850,17 +840,15 @@ nav {
     background-color: indigo;
     color: white;
 }
-.display_table{
-	background-color: aliceblue;
-	
+
+.display_table {
+    background-color: aliceblue;
 }
+
 .display_table .payement {
-    margin:30px auto;
-	background-color: aliceblue;
-   
+    margin: 30px auto;
+    background-color: aliceblue;
 }
-
-
 
 
 /* display php */
@@ -869,20 +857,17 @@ nav {
 /*          The End of CSS                */
 
 
-
-
 /*CSS*/
 
-/*Membership selection*/
 
+/*Membership selection*/
 
 .membership_rows {
     width: 90%;
     display: flex;
     justify-content: space-around;
     margin: 20px auto;
-	margin-bottom: 50px;
-	
+    margin-bottom: 50px;
 }
 
 .membership_rows .weekly {
@@ -930,10 +915,10 @@ nav {
     text-align: center;
 }
 
-.mycss{
-	color: green;
-	border:1px solid #000;
-	background: #ccc;
-	padding: 10px;
-	font-size:1.20em;
-	}
+.mycss {
+    color: green;
+    border: 1px solid #000;
+    background: #ccc;
+    padding: 10px;
+    font-size: 1.20em;
+}

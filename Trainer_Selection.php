@@ -22,11 +22,11 @@
                 <h1>FitMe</h1>
             </div>
             <div id="bars3">
-                <a href="../se/index.html">Home</a>
-				<a href="../se/signin.php">SignIn</a>
-                <a href="../se/signup.php">SignUp</a>
-                <a href="../se/contact.html">Contact</a>
-				<a href="../se/about.html">About</a>
+                <a href="../SE/index.html">Home</a>
+				<a href="../SE/signin.php">SignIn</a>
+                <a href="../SE/signup.php">SignUp</a>
+                <a href="../SE/contact.php">Contact</a>
+				<a href="../SE/about.html">About</a>
             </div>
 
 
@@ -57,6 +57,12 @@
                 {
                     
                     $sql3="select * from workout_plan where type= '$plan_type' and plan_id = $plan_number ;";
+					
+					if($plan_type=='both'){
+						
+					$sql3="select * from workout_plan where plan_id = $plan_number ;";
+						
+					}
                     
                         $result3 = mysqli_query($con, $sql3);
                     $exist = false;
@@ -78,11 +84,20 @@
                             
                         
                         
-                    $sql1="select * from trainer;";
+                    $sql1="select * from trainer where status=1;";
                     
                         $result2 = mysqli_query($con, $sql1);
-                        
                     
+					echo "<br><br>";
+					echo "<center> <table border='3px solid' width='100%' margin='10px auto' text-align='left'   >
+					<tr>
+					<th>Email</th>
+					<th>Name</th>
+					<th>Gender</th>
+					<th>Charges</th>
+					<th>Expertise</th>
+					</tr>";
+
 
                     while($row1=mysqli_fetch_assoc($result2))
                     {
@@ -92,12 +107,19 @@
                         $charges=$row1['charges'];
                         $expertise=$row1['expertise'];
                         
+                        echo "<tr>";
+			  
+						echo "<td>" . $row1['email'] . "</td>";
+						echo "<td>" . $row1['name'] . "</td>";
+						echo "<td>" . $row1['gender'] . "</td>";
+						echo "<td>" . $row1['charges'] . "</td>";
+						echo "<td>" . $row1['expertise'] . "</td>";
                         
-                        
-                        echo"<br> ";
-                        echo "<p class='mycss'>". $email."&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp". $name."&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp".$gender."&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRs.".$charges."&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp".$expertise  ."</p>";
-
+						echo "<tr>";
+						
+                      
                     }
+					echo "</center></table>";
             
             
                 }

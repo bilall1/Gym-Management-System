@@ -22,6 +22,7 @@
 	$membership_type = $_POST["type"];
 	$_SESSION["membership_type"] = $_POST["type"];
 
+
    
  ?>
           
@@ -31,11 +32,11 @@
                 <h1>FitMe</h1>
             </div>
             <div id="bars3">
-               <a href="../se/index.html">Home</a>
-				<a href="../se/signin.php">SignIn</a>
-                <a href="../se/signup.php">SignUp</a>
-                <a href="../se/contact.html">Contact</a>
-				<a href="../se/about.html">About</a>
+               <a href="../SE/index.html">Home</a>
+				<a href="../SE/signin.php">SignIn</a>
+                <a href="../SE/signup.php">SignUp</a>
+                <a href="../SE/contact.php">Contact</a>
+				<a href="../SE/about.html">About</a>
             </div>
 
 

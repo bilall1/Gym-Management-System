@@ -2,7 +2,7 @@
 
 <head>
     <title>
-        SignUp
+        Trainer SignUp
     </title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
@@ -28,7 +28,7 @@
         </div>
         <div id="abttext3">
             <h1>
-                Sign Up
+                Trainer's Sign Up
             </h1>
         </div>
     </nav>
@@ -42,7 +42,7 @@
 
         <div class="signupformdata">
 			<div id = "error" style="text-align: center;"></div>
-            <form id = "form" action="Membership_Selection.php" method= "post">
+            <form id = "form" action="Trainer_dashboard.php" method= "post">
 				<h3>Name</h3>
                 <input type="text" id="name" name="name" placeholder="Name here"  maxlength="20" size="40" required>
 				<br>
@@ -63,8 +63,16 @@
 				<input type="number" id="age" name="age" placeholder="age here" min="1" max="100" size="40" required>
 				<br>
 				<br>
+				<h3>Charges</h3>
+				<input type="number" id="charges" name="charges" placeholder="charges here" min="1" max="999999999" size="40" required>
+				<br>
+				<br>
 				<h3>Gender</h3>
 				<input type="text" id="gender" name="gender" placeholder="gender here" maxlength="6" size="40" required>
+				<br>
+				<br>
+				<h3>Expertise</h3>
+				<input type="text" id="expertise" name="expertise" placeholder="expertise here" maxlength="30" size="40" required>
 				<br>
 				<br>
 				<h3>Address</h3>
@@ -74,11 +82,10 @@
 				<input type="submit" name ="sub" id = "sub" value = "Proceed" />
             </form>
 			
-            
-               
-			 <a href ="../SE/trainer_signup.php" style="margin-left:290px; font-size:20px;">Signup as trainer</a>
-            
-            
+            <div class="signuptextbox">
+                
+                
+            </div>
 
 
 
@@ -98,7 +105,7 @@
 
             <div class="signupclick1">
                 <button>
-					         <a href="../SE/contact.php">TAKE ME TO CONTACT PAGE</a>
+					         <a href="../SE/contact.html">TAKE ME TO CONTACT PAGE</a>
                 </button>
             </div>
         </div>

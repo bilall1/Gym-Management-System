@@ -16,11 +16,11 @@
                 <h1>FitMe</h1>
             </div>
             <div id="bars3">
-                <a href="../se/index.html">Home</a>
-				<a href="../se/signin.php">SignIn</a>
-                <a href="../se/signup.php">SignUp</a>
-                <a href="../se/contact.html">Contact</a>
-				<a href="../se/about.html">About</a>
+                <a href="../SE/index.html">Home</a>
+				<a href="../SE/signin.php">SignIn</a>
+                <a href="../SE/signup.php">SignUp</a>
+                <a href="../SE/contact.php">Contact</a>
+				<a href="../SE/about.html">About</a>
             </div>
 
 
@@ -34,26 +34,27 @@
 	
 	<div class="signinform">
         <div class="signupheading">
-            <h1>
+			<br>
+            <h1 style="margin-left:40px">
                 Enter your Details
             </h1>
         </div>
 
         <div class="signinformdata">
 
-            <form action="signin.php" method= "post">
+            <form action="which_member.php" method= "post">
 				
 				<h3>Email</h3>
-                <input type="text" id="email" name="emial" placeholder="Email Here" size="40">
+                <input type="email" id="email" name="email" placeholder="Email here" maxlength="30" size="40" required>
 				<br>
 				<br>
 				<h3>Passward</h3>
-				<input type="text" id="pass" name="pass" placeholder="passward Here" size="40">
+				<input type="password" id="pass" name="pass" placeholder="passward Here"  maxlength="20"size="40" required>
 
 				<br>
                 <br><br>
 				
-				<input type="submit" />
+				<input type="submit" name ="sub1" id = "sub1" value = "Proceed" />
             </form>
 			
 
@@ -72,7 +73,7 @@
 
             <div class="signinclick1">
                 <button>
-					     <a href="../se/contact.html">TAKE ME TO CONTACT PAGE</a>
+					     <a href="../SE/contact.php">TAKE ME TO CONTACT PAGE</a>
                 </button>
             </div>
         </div>

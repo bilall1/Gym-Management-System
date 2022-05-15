@@ -21,11 +21,11 @@
                 <h1>FitMe</h1>
             </div>
             <div id="bars3">
-                <a href="../se/index.html">Home</a>
-				<a href="../se/signin.php">SignIn</a>
-                <a href="../se/signup.php">SignUp</a>
-                <a href="../se/contact.html">Contact</a>
-				<a href="../se/about.html">About</a>
+                <a href="../SE/index.html">Home</a>
+				<a href="../SE/signin.php">SignIn</a>
+                <a href="../SE/signup.php">SignUp</a>
+                <a href="../SE/contact.php">Contact</a>
+				<a href="../SE/about.html">About</a>
             </div>
 
 
@@ -123,7 +123,7 @@
 					Enter Credit Card Number: <input type="number" name="card" min="1" max="99999"  required><br><br>
 					Enter CVV PIN: <input type="number" name="pin" min="1" max="999" required><br><br>
 					Enter Expiry Date: <input type="date" name="date" required><br><br>
-					Enter Full Name: <input type="name" name="name" required><br><br>
+					Enter Full Name: <input type="text" name="name" required><br><br>
 					
 					
 					<br>	

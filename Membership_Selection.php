@@ -4,8 +4,6 @@
  ?>
  
 
-
-
 <html>
 
 <head>
@@ -28,11 +26,11 @@
                 <h1>FitMe</h1>
             </div>
             <div id="bars3">
-                <a href="../se/index.html">Home</a>
-				<a href="../se/signin.php">SignIn</a>
-                <a href="../se/signup.php">SignUp</a>
-                <a href="../se/contact.html">Contact</a>
-				<a href="../se/about.html">About</a>
+                <a href="../SE/index.html">Home</a>
+				<a href="../SE/signin.php">SignIn</a>
+                <a href="../SE/signup.php">SignUp</a>
+                <a href="../SE/contact.php">Contact</a>
+				<a href="../SE/about.html">About</a>
             </div>
 
 
@@ -74,6 +72,8 @@
             $_SESSION["cnic"] = $_POST["cnic"];
             $email = $_SESSION["email"];
             $cnic = $_SESSION["cnic"];
+            //Used for member dashboard later
+            $_SESSION["pass_login"]=$_POST["pass"];
 			
             
 		 $con = mysqli_connect("localhost","root","","SE");
@@ -111,11 +111,12 @@
 
 			$sql2 = "insert into member values('$b','$c','$a',$e,$d,'$f','$g');";
             $result2 = mysqli_query($con, $sql2);
+			$not_inserted = true;
             if($result2 == 1)
             {
-                echo "";
+                $not_inserted=false;
             }
-            else
+            if($not_inserted)
             {
                 echo '<script>alert("Registration failed! Register again")</script>';
                 echo '<script type="text/JavaScript">',
@@ -167,7 +168,7 @@
 ?>     
 		<div class="membership_rows">
         <div class="weekly">
-		<img src="https://img.icons8.com/ios-filled/50/000000/tear-off-calendar.png"/>
+		<img src="https://img.icons8.com/color/48/000000/wednesday.png"/>
             <h2><?php   echo $names[0] ?></h2>
           
 				
@@ -176,7 +177,7 @@
 
         </div>
         <div class="monthly">
-			<img src="https://img.icons8.com/ios-filled/50/000000/tear-off-calendar.png"/>
+			<img src="https://img.icons8.com/color/48/000000/calendar-week31.png"/>
               <h2><?php   echo $names[1] ?></h2>
           
 				
@@ -184,7 +185,7 @@
            
         </div>
         <div class="yearly">
-		<img src="https://img.icons8.com/ios-filled/50/000000/tear-off-calendar.png"/>
+		<img src="https://img.icons8.com/color/48/000000/plus-1year.png"/>
              <h2><?php   echo $names[2] ?></h2>
           
 				

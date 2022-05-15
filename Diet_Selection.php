@@ -20,11 +20,11 @@
                 <h1>FitMe</h1>
             </div>
             <div id="bars3">
-                <a href="../se/index.html">Home</a>
-				<a href="../se/signin.php">SignIn</a>
-                <a href="../se/signup.php">SignUp</a>
-                <a href="../se/contact.html">Contact</a>
-				<a href="../se/about.html">About</a>
+                <a href="../SE/index.html">Home</a>
+				<a href="../SE/signin.php">SignIn</a>
+                <a href="../SE/signup.php">SignUp</a>
+                <a href="../se/contact.php">Contact</a>
+				<a href="../SE/about.html">About</a>
             </div>
 
 
@@ -58,6 +58,10 @@
 			 $trainer_fee = $_SESSION["trainer_fee"];
 			 $trainer = $_SESSION["trainer"];
 			 $trainer_email = $_SESSION["trainer_email"];
+
+			 //Used for members dashboard
+			 $_SESSION["email_login"]=$_SESSION["email"];
+			 
 			 
 			
 		 $con = mysqli_connect("localhost","root","","SE");
@@ -122,6 +126,17 @@
 			
 				$result1 = mysqli_query($con, $sql);
 				
+				
+				echo "<br><br>";
+				echo "<center> <table border='3px solid' width='100%' margin='10px auto' text-align='left'   >
+				<tr>
+				<th>Nutrition ID</th>
+				<th>Breakfast</th>
+				<th>Lunch</th>
+				<th>Dinner</th>
+				</tr>";
+
+			
 			
 				while($row=mysqli_fetch_assoc($result1))
                 {
@@ -131,11 +146,21 @@
                     $lunch=$row['lunch'];
 					$dinner=$row['dinner'];
 					
-					echo"<br> ";
-					echo "<p class='mycss'>". $nut_id."&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp".$breakfast."&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp".$lunch."&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp".$dinner  ."</p>";
+					echo "<tr>";
+			  
+					echo "<td>" . $row['nut_id'] . "</td>";
+
+					echo "<td>" . $row['breakfast'] . "</td>";
+
+				    echo "<td>" . $row['lunch'] . "</td>";
 					
+					echo "<td>" . $row['dinner'] . "</td>";
+
+				    echo "</tr>";
+				
 					
                 }
+				echo "</center></table>";
 		
 		
 		}
@@ -149,7 +174,7 @@
 			<br>
 			
 			<form action="Diet_Selection.php" method="post">
-			Enter Nutrition Id: <input type="nut" name="nut"><br>
+			Enter Nutrition Id: <input type="number" name="nut"><br>
 			<br>	
 			<input type="submit" name ="sub" id = "sub" value = "Proceed" />
 			</form>
@@ -192,6 +217,9 @@ if(isset($_POST["sub"]))
             $result2 = mysqli_query($con, $sql2);
 			
 			echo "Nutrition Saved!!";
+			echo '<script type="text/JavaScript">',
+							'window.location.href = "../se/member_dashboard.php"',
+							'</script>';
 		
 		}
 	}

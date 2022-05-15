@@ -13,18 +13,17 @@
 <body>
     <nav>
 		<button style="align:left;border:none;text-align:center; display:relative;font-size:16px ;margin:4px 2px ;border-radius:50%;cursor: pointer;padding: 8px;text-decoration: none;" >
-					         <a href="../se/equipment_management.php">Back</a>
+					         <a href="../SE/equipment_management.php">Back</a>
         </button>
         <div class="navbar3">
             <div id="logo3">
                 <h1>FitMe</h1>
             </div>
             <div id="bars3">
-              <a href="../se/index.html">Home</a>
-				<a href="../se/signin.php">SignIn</a>
-                <a href="../se/signup.php">SignUp</a>
-                <a href="../se/contact.html">Contact</a>
-				<a href="../se/about.html">About</a>
+				<a href="../SE/index.html">Home</a>
+                <a href="../se/contact.php">Contact</a>
+				<a href="../SE/about.html">About</a>
+				<a href="../SE/signin.php">Sign Out</a>
             </div>
 
 
@@ -119,6 +118,9 @@
 				$result3 = mysqli_query($con, $sql3);
 				if($result3==1)
 					echo "Success";
+				else
+					echo "Failed";
+				
 				header("Location: delete_equipment.php");
 			}
 	}

@@ -22,11 +22,11 @@
                 <h1>FitMe</h1>
             </div>
             <div id="bars3">
-                <a href="../se/index.html">Home</a>
-				<a href="../se/signin.php">SignIn</a>
-                <a href="../se/signup.php">SignUp</a>
-                <a href="../se/contact.html">Contact</a>
-				<a href="../se/about.html">About</a>
+                <a href="../SE/index.html">Home</a>
+				<a href="../SE/signin.php">SignIn</a>
+                <a href="../SE/signup.php">SignUp</a>
+                <a href="../SE/contact.php">Contact</a>
+				<a href="../SE/about.html">About</a>
             </div>
 
 
@@ -66,20 +66,36 @@
 					}
 			
                 	$result1 = mysqli_query($con, $sql);
-					
 				
+
+				
+				echo "<br><br>";
+				echo "<center> <table border='3px solid' width='70%' margin='10px auto' text-align='left'   >
+				<tr>
+				<th>Plan Id</th>
+				<th>Description</th>
+				<th>Duration</th>
+				</tr>";
+
 	
                 while($row=mysqli_fetch_assoc($result1))
                 {
-
-                    $plan_id=$row['plan_id'];
+					$plan_id=$row['plan_id'];
                     $desc=$row['description'];
                     $duration=$row['duration'];
-					echo"<br> ";
-					echo "<p class='mycss'>". $plan_id."&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp".$desc."&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp".$duration  ."</p>";
+					
+					echo "<tr>";
+					
+					echo "<td>" . $row['plan_id']. "</td>";
+					echo "<td>" . $row['description']. "</td>";
+					echo "<td>" . $row['duration']. "</td>";
+					
+					echo "<tr>";
+					
 					
 					
                 }
+				echo "</center></table>";
 				
 				
 			
@@ -94,7 +110,7 @@
 			<br>
 			
 			<form action="Trainer_Selection.php" method="post">
-			Enter Plan Number: <input type="plan" name="plan"><br>
+			Enter Plan Number: <input type="number" name="plan"><br>
 			<br>	
 			<input type="submit" name ="sub2" id = "sub2" value = "Proceed" />
 			</form>
