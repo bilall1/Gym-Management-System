@@ -172,10 +172,32 @@
         <div class="enter_plan" >
 			<h2> LIKE OUR NUTRITION SUGESSIONS? CHOOSE ONE!</h2>
 			<br>
-			
+
 			<form action="Diet_Selection.php" method="post">
-			Enter Nutrition Id: <input type="number" name="nut"><br>
-			<br>	
+
+			<label>Select Nutrition Id</label>
+            <select name="nut" id="nut" id=value>
+            <?php
+
+			$sql="select nut_id,breakfast,lunch,dinner from nutrition where plan_id=$plan_number;";		
+			$result1 = mysqli_query($con, $sql);
+            while ($plan= mysqli_fetch_array(
+                $result1,MYSQLI_ASSOC)):;
+
+
+            ?>
+            <option value="<?php echo $plan["nut_id"];
+                ?>">
+                    <?php echo $plan["nut_id"];
+
+                    ?>
+                </option>
+            <?php 
+                endwhile; 
+            ?>
+            </select>
+            <br><br>
+			
 			<input type="submit" name ="sub" id = "sub" value = "Proceed" />
 			</form>
 

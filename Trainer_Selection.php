@@ -131,8 +131,30 @@
 			<h2> Select Trainer:</h2>
 			<br>
 			<form action="Payement_WT.php" method="post">
-			Enter Trainer Email: <input type="email" name="email"><br>
-			<br>	
+
+            <label>Select Trainer Email</label>
+            <select name="email" id="email" id=value>
+            <?php
+
+            $sql1="select * from trainer where status=1;";                   
+            $result1 = mysqli_query($con, $sql1);
+            while ($plan= mysqli_fetch_array(
+                $result1,MYSQLI_ASSOC)):;
+
+
+            ?>
+            <option value="<?php echo $plan["email"];
+                ?>">
+                    <?php echo $plan["email"];
+
+                    ?>
+                </option>
+            <?php 
+                endwhile; 
+            ?>
+            </select>
+            <br><br>
+	
 			<input type="submit" name ="sub3" id = "sub3" value = "Proceed" />
 			</form>
 			

@@ -112,12 +112,35 @@
         <div class="enter_plan" >
 			<h2> CHOOSE NUTRITION PLAN TO DELETE!</h2>
 			<br>
-			
-			<form action="delete_diet.php" method="post">
-			Enter Nutrition Number: <input type="nut" name="nut"><br>
-			<br>	
-			<input type="submit" name ="sub2" id = "sub2" value = "Proceed" />
-			</form>
+            
+            <form action="delete_diet.php" method="post">
+            <label>Select Id</label>
+            <select name="nut" id="nut" id=value>
+            <?php
+
+            $sql="select nut_id,breakfast,lunch,dinner from nutrition where plan_id IN (select plan_id from member_workout_plan where email = '$email');";
+            $result1 = mysqli_query($con, $sql);
+            while ($plan= mysqli_fetch_array(
+                $result1,MYSQLI_ASSOC)):;
+
+
+            ?>
+            <option value="<?php echo $plan["nut_id"];
+                ?>">
+                    <?php echo $plan["nut_id"];
+
+                    ?>
+                </option>
+            <?php 
+                endwhile; 
+            ?>
+            </select>
+            <br><br>
+            <input type="submit" name ="sub2" id = "sub2" value = "Proceed" />
+
+            <br>
+            <br>
+
 
         </div>
 

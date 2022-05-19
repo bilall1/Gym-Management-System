@@ -82,9 +82,32 @@
 			<h1 style="text-align:center">Enter Equipment Id </h1><br>
 				
 				<form id="form" action="delete_equipment.php" method="post" style="text-align:center">
-					Equipment ID: <input type="number" name="id" required><br><br>
 					
+				<form id="form" action="update_equipment.php" method="post" style="text-align:center">
+
+				<label>Select Id</label>
+				<select name="id" id="id" id=value>
+				<?php
+
+				$sql3 = "select * from equipment";
+				$result1 = mysqli_query($con, $sql3);
+				while ($plan= mysqli_fetch_array(
+					$result1,MYSQLI_ASSOC)):;
+
+
+				?>
+				<option value="<?php echo $plan["equip_id"];
+					?>">
+						<?php echo $plan["equip_id"];
+
+						?>
+					</option>
+				<?php 
+					endwhile; 
+				?>
+				</select>
 					
+					<br>
 					<br>	
 					 <input type="submit" name ="submit" id = "submit" value = "Proceed" />
 				</form>

@@ -110,8 +110,36 @@
 			<br>
 			
 			<form action="Trainer_Selection.php" method="post">
-			Enter Plan Number: <input type="number" name="plan"><br>
-			<br>	
+
+            <label>Select Workout Id</label>
+            <select name="plan" id="plan" id=value>
+            <?php
+
+            if($plan_type != 'both'){
+                $sql="select plan_id,description,duration from workout_plan where type='$plan_type';";
+            }
+            else{
+            $sql="select plan_id,description,duration from workout_plan;";
+            }
+
+            $result1 = mysqli_query($con, $sql);
+            while ($plan= mysqli_fetch_array(
+                $result1,MYSQLI_ASSOC)):;
+
+
+            ?>
+            <option value="<?php echo $plan["plan_id"];
+                ?>">
+                    <?php echo $plan["plan_id"];
+
+                    ?>
+                </option>
+            <?php 
+                endwhile; 
+            ?>
+            </select>
+            <br><br>
+	
 			<input type="submit" name ="sub2" id = "sub2" value = "Proceed" />
 			</form>
 

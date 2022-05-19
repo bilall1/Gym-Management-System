@@ -63,13 +63,15 @@
                 $sql22="select BMI,log_date from log where email='$email';";
                 
                     $result11 = mysqli_query($con, $sql22);
-            
+
+                    $date_found=FALSE;
                     while($row11=mysqli_fetch_assoc($result11))
                     {
                     
 						$b=$row11['BMI'];
 						$d=$row11['log_date'];
                         $count=$count+1;
+                        $date_found=TRUE;
                     }
             }
             $my_array = array_fill(0, $count, 0);
@@ -83,14 +85,6 @@
             $index=$index-1;
             }
 
-
-
-        $date1 = $d;
-        $date2=date('Y-m-d',(strtotime ( '-1 day' , strtotime ( $date1) ) ));
-        $date3=date('Y-m-d',(strtotime ( '-1 day' , strtotime ( $date2) ) ));
-        $date4=date('Y-m-d',(strtotime ( '-1 day' , strtotime ( $date3) ) ));
-        $bmi=$b;
-
         if($count==0){
             echo "Not Enough Data to Plot.....";
         }
@@ -98,9 +92,19 @@
             echo "Not Enough Data to Plot.....";
         }
 
+        
+        if($date_found==TRUE){
 
+            $date1 = $d;
+        $date2=date('Y-m-d',(strtotime ( '-1 day' , strtotime ( $date1) ) ));
+        $date3=date('Y-m-d',(strtotime ( '-1 day' , strtotime ( $date2) ) ));
+        $date4=date('Y-m-d',(strtotime ( '-1 day' , strtotime ( $date3) ) ));
+        $bmi=$b;
 
+        
+        }
         ?>
+        
         <div id="curve_chart" style="width: 900px; height: 500px"></div>
 
         
@@ -151,6 +155,10 @@
         chart.draw(data, options);
       }
     </script>
+
+
+
+        
         
 
         </div>

@@ -54,21 +54,16 @@
                         $sql1="select plan_id from nutrition where nut_id = $nut and plan_id IN (select plan_id from member_workout_plan where email = '$email');";
                 	    $result12 = mysqli_query($con, $sql1);
 				
-            
                         while($row=mysqli_fetch_assoc($result12))
                         {
                             $plan_number = $row['plan_id'];
-                        }
-                        //add all validation checks from trainer_selection
-                        $sql24="insert into Memeber_plan_nutrition Values($plan_number,'$email',$nut);";
-                        $result14 = mysqli_query($con, $sql24);
-                        if($result14)
-                        {
-                            echo "Nutrition added successfully!";
-                        }
-                        else
-                        {
-                            echo "Nutrition selection failed!";
+
+                            $sql24="insert into Memeber_plan_nutrition Values($plan_number,'$email',$nut);";
+                            $result14 = mysqli_query($con, $sql24);
+                            if($result14)
+                            {
+                                echo "Nutrition added successfully!";
+                            }
                         }
                     }
                 }
@@ -117,12 +112,35 @@
         <div class="enter_plan" >
 			<h2> LIKE OUR NUTRITION SUGESSIONS? CHOOSE ONE!</h2>
 			<br>
-			
-			<form action="add_diet.php" method="post">
-			Enter Nutrition Id: <input type="nut" name="nut"><br>
-			<br>	
-			<input type="submit" name ="sub2" id = "sub2" value = "Proceed" />
-			</form>
+
+            <form action="add_diet.php" method="post">
+            <label>Select Id</label>
+            <select name="nut" id="nut" id=value>
+            <?php
+
+            $sql="select nut_id,breakfast,lunch,dinner from nutrition where plan_id IN (select plan_id from member_workout_plan where email = '$email');";
+            $result1 = mysqli_query($con, $sql);
+            while ($plan= mysqli_fetch_array(
+                $result1,MYSQLI_ASSOC)):;
+
+
+            ?>
+            <option value="<?php echo $plan["nut_id"];
+                ?>">
+                    <?php echo $plan["nut_id"];
+
+                    ?>
+                </option>
+            <?php 
+                endwhile; 
+            ?>
+            </select>
+            <br><br>
+            <input type="submit" name ="sub2" id = "sub2" value = "Proceed" />
+
+            <br>
+            <br>
+
 
         </div>
 

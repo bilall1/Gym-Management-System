@@ -25,15 +25,12 @@
 
 
         </div>
-        <div id="abttext">
-            <h1>
-                Feedback
-            </h1>
-        </div>
+        
     </nav>
 
     <div class="form">
         <div class="heading">
+            <br><br>
             <h1>
                 Give Feedback
             </h1>

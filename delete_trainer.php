@@ -90,12 +90,34 @@
 			
 			<h1 style="text-align:center">Enter Trainer Email </h1><br>
 				
-				<form id="form" action="approve_trainer.php" method="post" style="text-align:center">
-					Trainer's Email: <input type="email" id="email" name="email" placeholder="Email here" maxlength="30" size="40" required>
-					
-					<br><br>	
-					<input type="submit" name ="submit1" id = "submit1" value = "Proceed" />
-				</form>
+
+			<form id="form" action="delete_trainer.php" method="post" style="text-align:center">
+            <label>Select Email</label>
+            <select name="email" id="email" id=value>
+            <?php
+
+			$sql3 = "select * from trainer where status=0";
+			$result1 = mysqli_query($con, $sql3);
+            while ($plan= mysqli_fetch_array(
+                $result1,MYSQLI_ASSOC)):;
+
+				
+            ?>
+            <option value="<?php echo $plan["email"];
+                ?>">
+                    <?php echo $plan["email"];
+
+                    ?>
+                </option>
+            <?php 
+                endwhile; 
+            ?>
+            </select>
+            <br><br>
+            <input type="submit" name ="submit1" id = "submit1" value = "Proceed" />
+
+            <br>
+            <br>
 
         </div>
 		

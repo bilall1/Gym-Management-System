@@ -126,12 +126,35 @@
         <div class="enter_plan" >
 			<h2> CHOOSE WORKOUT PLAN TO DELETE!</h2>
 			<br>
-			
-			<form action="delete_workout.php" method="post">
-			Enter Plan Number: <input type="plan" name="plan"><br>
-			<br>	
-			<input type="submit" name ="sub2" id = "sub2" value = "Proceed" />
-			</form>
+
+            <form action="delete_workout.php" method="post">
+            <label>Select Id</label>
+            <select name="plan" id="plan" id=value>
+            <?php
+
+            $sql="select * from workout_plan where plan_id IN (select plan_id from member_workout_plan where email = '$email');";
+            $result1 = mysqli_query($con, $sql);
+            while ($plan= mysqli_fetch_array(
+                $result1,MYSQLI_ASSOC)):;
+
+
+            ?>
+            <option value="<?php echo $plan["plan_id"];
+                ?>">
+                    <?php echo $plan["plan_id"];
+
+                    ?>
+                </option>
+            <?php 
+                endwhile; 
+            ?>
+            </select>
+            <br><br>
+            <input type="submit" name ="sub2" id = "sub2" value = "Proceed" />
+
+            <br>
+            <br>
+
 
         </div>
 

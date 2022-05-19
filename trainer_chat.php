@@ -82,11 +82,35 @@
         <div class="enter_plan" >
 			<h2> Select Member:</h2>
 			<br>
-			<form action="trainer_member_chat.php" method="post">
-			Enter Member Email: <input type="email" name="mem_email"><br>
-			<br>	
-			<input type="submit" name ="sub3" id = "sub3" value = "Proceed" />
-			</form>
+
+            <form action="trainer_member_chat.php" method="post">
+            <label>Select Email</label>
+            <select name="mem_email" id="mem_email" id=value>
+            <?php
+
+            $sql3 = "select member_email from member_trainer where trainer_email = '$email_trainer';";
+            $result1 = mysqli_query($con, $sql3);
+            while ($plan= mysqli_fetch_array(
+                $result1,MYSQLI_ASSOC)):;
+
+
+            ?>
+            <option value="<?php echo $plan["member_email"];
+                ?>">
+                    <?php echo $plan["member_email"];
+
+                    ?>
+                </option>
+            <?php 
+                endwhile; 
+            ?>
+            </select>
+            <br><br>
+            <input type="submit" name ="sub3" id = "sub3" value = "Proceed" />
+
+            <br>
+            <br>
+
 			
         </div>
     </div>

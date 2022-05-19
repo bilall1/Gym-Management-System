@@ -120,12 +120,35 @@
         <div class="enter_plan" >
                 <h2> Choose demo Id: </h2>
                 <br>
-                
+
                 <form action="demos.php" method="post">
-                Enter Demo Id: <input type="number" name="id"><br>
-                <br>	
+                <label>Select Id</label>
+                <select name="id" id="id" id=value>
+                <?php
+
+                $sql3 = "select * from demo";
+                $result1 = mysqli_query($con, $sql3);
+                while ($plan= mysqli_fetch_array(
+                    $result1,MYSQLI_ASSOC)):;
+
+
+                ?>
+                <option value="<?php echo $plan["demo_id"];
+                    ?>">
+                        <?php echo $plan["demo_id"];
+
+                        ?>
+                    </option>
+                <?php 
+                    endwhile; 
+                ?>
+                </select>
+                <br><br>
                 <input type="submit" name ="sub3" id = "sub3" value = "Proceed" />
-                </form>
+
+                <br>
+                <br>
+
 
             </div>
 
