@@ -52,11 +52,11 @@
 				<br>
 				<br>
 				<h3>Password</h3>
-				<input type="password" id="pass" name="pass" placeholder="passward Here"  maxlength="20"size="40" required>
+				<input type="password" id="pass" name="pass" placeholder="passward Here"  minlength="8"maxlength="20"size="40" required>
 				<br>
 				<br>
 				<h3>Cnic</h3>
-				<input type="number" id="cnic" name="cnic" placeholder="Cnic with out dashes" min="1" max="9999999999999" size="40" required>
+				<input type="number" id="cnic" name="cnic" placeholder="Cnic with out dashes" min="10000000000"max="99999999999"  size="40" required>
 				<br>
 				<br>
 				<h3>Age</h3>
